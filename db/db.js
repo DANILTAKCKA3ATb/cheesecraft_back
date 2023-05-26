@@ -1,7 +1,7 @@
 const { Pool, Client } = require("pg");
 require("dotenv").config();
 
-const client = new Client("postgres://zcqtikfy:GuqqO1WtRQYB9KRuj2V7C2N_UxoIICpe@trumpet.db.elephantsql.com/zcqtikfy");
+const client = new Client(process.env.DB);
 
 client.connect(function (err) {
     if (err) {
